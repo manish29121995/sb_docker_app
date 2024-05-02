@@ -1,0 +1,6 @@
+FROM openjdk:11
+MAINTAINER "Manish"
+COPY target/sb_docker_app  /user/app/
+WORKDIR /user/app/
+EXPOSE 8081
+ENTRYPOINT ["java","-jar","sb_docker_app.jar"]
